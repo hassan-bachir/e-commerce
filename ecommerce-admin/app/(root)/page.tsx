@@ -3,8 +3,10 @@ import Image from "next/image";
 
 export default function Home() {
     return (
-        <div>
-            <Button>hassan</Button>
+        <div className="p-4">
+            <Button size="default" variant="destructive">
+                hassanxxx
+            </Button>
         </div>
     );
 }
