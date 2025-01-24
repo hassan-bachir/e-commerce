@@ -1,6 +1,7 @@
 import Image from "next/image";
 import MaxWidthWrapper from "@/components/MaxWidthWrapper";
 import {Check, Star} from "lucide-react";
+import Phone from "@/components/Phone";
 export default function Home() {
   return (
 <div className="bg-slate-50">
@@ -105,9 +106,9 @@ export default function Home() {
       lg:mt-20 h-fit
       ">
         <div className="relative md:max-w-xl">
-          <img src="/your-image.png" className="absolute w-40 lg:w-52 left-56 -top-20 select-none hidden sm:block lg:hidden xl:block " alt="your image" />
+           <img src="/your-image.png" className="absolute w-40 lg:w-52 left-56 -top-20 select-none hidden sm:block lg:hidden xl:block " alt="your image" />
           <img src="/line.png" alt="line" className="absolute w-20 -left-6 -bottom-6 select-none" />
-          {/* <Phone/> */}
+          <Phone className='w-64' imgSrc='/testimonials/1.jpg' /> 
         </div>
       </div>
     </MaxWidthWrapper>
