@@ -57,7 +57,6 @@ export default {
         sm: "calc(var(--radius) - 4px)",
       },
       keyframes: {
-        // Add this keyframes section
         marquee: {
           "100%": {
             transform: "translateY(-50%)",
@@ -77,7 +76,6 @@ export default {
         },
       },
       animation: {
-        // Add this animation section
         marquee: "marquee var(--marquee-duration) linear infinite",
         "fade-in": "fade-in 0.5s linear forwards",
         flashing: "flashing 1.4s infinite linear",
