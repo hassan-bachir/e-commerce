@@ -14,8 +14,7 @@ const Page = () => {
   const [uploadProgress, setUploadProgress] = useState<number>(0);
   const router = useRouter();
 
-  // , isUploading
-  const { startUpload } = useUploadThing("imageUploader", {
+  const { startUpload, isUploading } = useUploadThing("imageUploader", {
     onClientUploadComplete: ([data]) => {
       const configId = data.serverData.configId;
       startTransition(() => {
@@ -45,7 +44,6 @@ const Page = () => {
     });
   };
 
-  const isUploading = false;
   const [isPending, startTransition] = useTransition();
   return (
     <div
@@ -62,7 +60,8 @@ const Page = () => {
           onDropAccepted={onDropAccepted}
           accept={{
             "image/png": [".png"],
-            "image/jpeg": [".jpeg", ".jpg"],
+            "image/jpeg": [".jpeg"],
+            "image/jpg": [".jpg"],
             "image/heic": [".heic", ".heif"],
             "image/jxl": [".jxl"],
             "image/avif": [".avif"],
