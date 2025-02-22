@@ -57,7 +57,7 @@ importers:
         specifier: ^0.9.4
         version: 0.9.4(typescript@5.7.2)
       sharp:
-        specifier: 0.32.6
+        specifier: ^0.32.6
         version: 0.32.6
       tailwind-merge:
         specifier: ^2.6.0
