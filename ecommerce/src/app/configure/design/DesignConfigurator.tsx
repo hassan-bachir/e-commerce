@@ -1,4 +1,8 @@
 "use client";
+// bg-blue-950 border-blue-950
+// bg-zinc-900 border-zinc-900
+// bg-rose-950 border-rose-950
+// bg-pink-500 border-pink-500
 
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import React, { useState } from "react";
@@ -47,7 +51,7 @@ const DesignConfigurator = ({
           <div
             className={cn(
               "absolute inset-0 left-[3px] top-px right-[3px] bottom-px rounded-[32px]",
-              `bg-zinc-950`
+              `bg-${options.color.tw}`
             )}
           />
         </div>
@@ -103,6 +107,30 @@ const DesignConfigurator = ({
                   }}
                 >
                   <Label>Color: {options.color.label}</Label>
+                  <div className="mt-3 flex items-center space-x-3">
+                    {COLORS.map((color) => (
+                      <RadioGroup.Option
+                        key={color.label}
+                        value={color}
+                        as="div"
+                        className={({ checked }) =>
+                          cn(
+                            "relative -m-0.5 flex cursor-pointer items-center justify-center rounded-full p-0.5 active:ring-0 focus:ring-0 active:outline-none focus:outline-none border-2 border-transparent",
+                            {
+                              [`border-${color.tw}`]: checked,
+                            }
+                          )
+                        }
+                      >
+                        <span
+                          className={cn(
+                            `bg-${color.tw}`,
+                            "h-8 w-8 rounded-full border border-black border-opacity-10"
+                          )}
+                        />
+                      </RadioGroup.Option>
+                    ))}
+                  </div>
                 </RadioGroup>
               </div>
             </div>
