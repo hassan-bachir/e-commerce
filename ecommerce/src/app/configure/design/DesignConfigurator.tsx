@@ -9,6 +9,7 @@ import HandleComponent from "@/components/HandleComponent";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { RadioGroup } from "@headlessui/react";
 import { COLORS } from "@/validators/option-validator";
+import { Label } from "@/components/ui/label";
 interface DesignConfiguratorProps {
   configId: string;
   imageUrl: string;
@@ -100,7 +101,9 @@ const DesignConfigurator = ({
                       color: val,
                     }));
                   }}
-                ></RadioGroup>
+                >
+                  <Label>Color: {options.color.label}</Label>
+                </RadioGroup>
               </div>
             </div>
           </div>
