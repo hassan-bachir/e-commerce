@@ -3,6 +3,8 @@
 // bg-rose-950 border-rose-950
 // bg-pink-500 border-pink-500
 
+import { PRODUCT_PRICES } from "@/config/products";
+
 export const COLORS = [
   { label: "Black", value: "black", tw: "zinc-900" },
   {
@@ -44,38 +46,38 @@ export const MODELS = {
   ],
 } as const;
 
-// export const MATERIALS = {
-//   name: 'material',
-//   options: [
-//     {
-//       label: 'Silicone',
-//       value: 'silicone',
-//       description: undefined,
-//       price: PRODUCT_PRICES.material.silicone,
-//     },
-//     {
-//       label: 'Soft Polycarbonate',
-//       value: 'polycarbonate',
-//       description: 'Scratch-resistant coating',
-//       price: PRODUCT_PRICES.material.polycarbonate,
-//     },
-//   ],
-// } as const
+export const MATERIALS = {
+  name: "material",
+  options: [
+    {
+      label: "Silicone",
+      value: "silicone",
+      description: undefined,
+      price: PRODUCT_PRICES.material.silicone,
+    },
+    {
+      label: "Soft Polycarbonate",
+      value: "polycarbonate",
+      description: "Scratch-resistant coating",
+      price: PRODUCT_PRICES.material.polycarbonate,
+    },
+  ],
+} as const;
 
-// export const FINISHES = {
-//   name: 'finish',
-//   options: [
-//     {
-//       label: 'Smooth Finish',
-//       value: 'smooth',
-//       description: undefined,
-//       price: PRODUCT_PRICES.finish.smooth,
-//     },
-//     {
-//       label: 'Textured Finish',
-//       value: 'textured',
-//       description: 'Soft grippy texture',
-//       price: PRODUCT_PRICES.finish.textured,
-//     },
-//   ],
-// } as const
+export const FINISHES = {
+  name: "finish",
+  options: [
+    {
+      label: "Smooth Finish",
+      value: "smooth",
+      description: undefined,
+      price: PRODUCT_PRICES.finish.smooth,
+    },
+    {
+      label: "Textured Finish",
+      value: "textured",
+      description: "Soft grippy texture",
+      price: PRODUCT_PRICES.finish.textured,
+    },
+  ],
+} as const;
