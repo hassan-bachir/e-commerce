@@ -13,7 +13,6 @@ export const COLORS = [
     tw: "blue-950",
   },
   { label: "Rose", value: "rose", tw: "rose-950" },
-  { label: "Pink", value: "pink", tw: "pink-500" },
 ] as const;
 
 export const MODELS = {
